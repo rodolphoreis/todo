@@ -19,6 +19,11 @@ function App() {
   const [task, setTask] = useState("");
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
+    const newTask = {
+      id: uuidv4(),
+      title: task,
+      isCompleted: false,
+    };
   }
   return (
     <main className="container max-w-full">

@@ -24,6 +24,12 @@ function App() {
       title: task,
       isCompleted: false,
     };
+    setTaskList([...taskList, newTask]);
+    setTask("");
+  }
+  function handleSubmitChange(event: React.ChangeEvent<HTMLInputElement>) {
+    setTask(event.target.value);
+  }
   function handleCreteNewTask() {
     if (task.trim() === "") return;
     const newTask = {

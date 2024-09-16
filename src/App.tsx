@@ -68,6 +68,7 @@ function App() {
           <button
             type="submit"
             className=" flex p-2 text-lg text-white bg-blue-400 hover:bg-blue-500 rounded-md items-center"
+            onClick={handleCreteNewTask}
           >
             Criar <FaPlus className="ml-2" size={15} />
           </button>

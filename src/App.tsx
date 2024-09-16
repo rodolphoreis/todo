@@ -9,6 +9,14 @@ interface Task {
 }
 
 function App() {
+  const [taskList, setTaskList] = useState<Task[]>([
+    {
+      id: uuidv4(),
+      title: "Estudar React",
+      isCompleted: false,
+    },
+  ]);
+  const [task, setTask] = useState("");
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
   }

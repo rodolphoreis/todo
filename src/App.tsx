@@ -24,6 +24,15 @@ function App() {
       title: task,
       isCompleted: false,
     };
+  function handleCreteNewTask() {
+    if (task.trim() === "") return;
+    const newTask = {
+      id: uuidv4(),
+      title: task,
+      isCompleted: false,
+    };
+    setTaskList([...taskList, newTask]);
+    setTask("");
   }
   return (
     <main className="container max-w-full">

@@ -2,6 +2,12 @@ import { FormEvent } from "react";
 import { FaTasks } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
 
+interface Task {
+  id: string;
+  title: string;
+  isCompleted: boolean;
+}
+
 function App() {
   function handleSubmit(event: FormEvent) {
     event.preventDefault();

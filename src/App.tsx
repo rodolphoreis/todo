@@ -58,6 +58,10 @@ function App() {
         <form className="gap-2 flex w-full" onSubmit={handleSubmit}>
           <input
             type="text"
+            name="task"
+            value={task}
+            onChange={handleSubmitChange}
+            required
             className="p-4 flex-grow text-lg text-gray-800 border-none rounded-md focus:outline-none"
             placeholder="Adicionar nova tarefa..."
           />

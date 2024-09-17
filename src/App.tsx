@@ -46,6 +46,10 @@ function App() {
     );
     setTaskList(updatedTasks);
   }
+  function handleDeleteTask(id: string) {
+    const updatedTasks = taskList.filter((task) => task.id !== id);
+    setTaskList(updatedTasks);
+  }
   return (
     <main className="container max-w-full">
       <header className=" w-full  mx-auto my-0 h-28 bg-zinc-950">

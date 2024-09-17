@@ -1,6 +1,9 @@
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import { FaTasks } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
+import { Tasks } from "./components/Tasks";
+import { MdOutlineChecklist } from "react-icons/md";
 
 interface Task {
   id: string;

@@ -40,6 +40,12 @@ function App() {
     setTaskList([...taskList, newTask]);
     setTask("");
   }
+  function handleIsCompleted(id: string) {
+    const updatedTasks = taskList.map((task) =>
+      task.id === id ? { ...task, isCompleted: !task.isCompleted } : task
+    );
+    setTaskList(updatedTasks);
+  }
   return (
     <main className="container max-w-full">
       <header className=" w-full  mx-auto my-0 h-28 bg-zinc-950">

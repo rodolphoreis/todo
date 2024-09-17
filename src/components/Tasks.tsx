@@ -37,7 +37,7 @@ export function Tasks({
           <input
             type="radio"
             onClick={handleChangeIsCompleted}
-            className="text-3xl mr-3 text-zinc-200"
+            className="form-radio mr-3 text-blue-500 focus:ring-zinc-800"
           />
           {isCompleted ? (
             <label className="line-through text-zinc-300">{title}</label>

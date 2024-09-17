@@ -50,6 +50,12 @@ function App() {
     const updatedTasks = taskList.filter((task) => task.id !== id);
     setTaskList(updatedTasks);
   }
+  const tasksCreated = taskList.length;
+  const completedTasks = taskList.reduce(
+    (acc, task) => (task.isCompleted ? acc + 1 : acc),
+    0
+  );
+
   return (
     <main className="container max-w-full">
       <header className=" w-full  mx-auto my-0 h-28 bg-zinc-950">

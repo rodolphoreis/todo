@@ -74,6 +74,45 @@ function App() {
           </button>
         </form>
       </div>
+
+      <div className="flex justify-between max-w-screen-xl mx-auto mt-16 text-center text-lg  ">
+        <p className=" text-blue-400 font-bold">
+          Tarefas criadas{" "}
+          <span className="bg-zinc-600 text-zinc-200 ml-2 px-3  py-1.5 rounded-full">
+            {taskList.length}
+          </span>
+        </p>
+        <p className="text-purple-400 font-bold">
+          Concluídas{" "}
+          <span className="bg-zinc-600 px-3 ml-2 text-zinc-200 py-1.5 rounded-full">
+            {completedTasks} de {tasksCreated}
+          </span>
+        </p>
+      </div>
+
+      {taskList.length > 0 ? (
+        <div className="max-w-screen-xl mx-auto my-12 flex flex-col items-center justify-center">
+          {taskList.map((task) => (
+            <Tasks
+              key={task.id}
+              id={task.id}
+              title={task.title}
+              isCompleted={task.isCompleted}
+              handleIsCompleted={handleIsCompleted}
+              handleDeleteTask={handleDeleteTask}
+            />
+          ))}
+        </div>
+      ) : (
+        <div className="max-w-screen-sm mx-auto my-24 text-center  text-zinc-300">
+          <div className=" flex gap-3 justify-center">
+            <MdOutlineChecklist size={40} className="text-gray-300" />
+            <h1 className="text-zinc-300 text-3xl">
+              Nenhuma tarefa cadastrada
+            </h1>
+          </div>
+        </div>
+      )}
     </main>
   );
 }

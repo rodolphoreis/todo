@@ -21,11 +21,9 @@ export function Tasks({
   }
   function handleChangeIsCompleted() {
     handleIsCompleted(id);
-    console.log("completed");
   }
   function handleDelete() {
     handleDeleteTask(id);
-    console.log("deleted");
   }
   return (
     <article className="max-w-screen-xl w-full mx-auto flex my-2 items-center justify-center">

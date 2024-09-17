@@ -107,7 +107,7 @@ function App() {
       </div>
 
       {taskList.length > 0 ? (
-        <div className="max-w-screen-xl mx-auto my-12 flex flex-col items-center justify-center">
+        <div className="max-w-screen-xl mx-auto my-4 flex flex-col items-center justify-center ">
           {taskList.map((task) => (
             <Tasks
               key={task.id}
